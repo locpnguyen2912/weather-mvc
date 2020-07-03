@@ -1,7 +1,6 @@
 package com.oddle.app;
 
 import com.oddle.app.controller.WeatherController;
-import com.oddle.app.model.Weather;
 import com.oddle.app.model.WeatherLog;
 import com.oddle.app.model.WeatherResp;
 import com.oddle.app.service.WeatherLogService;
@@ -12,15 +11,14 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.instanceOf;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
